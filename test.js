@@ -1,5 +1,5 @@
 const test = require('tape')
-const match = require('.')
+const match = require('./')
 
 test('should not match', function (t) {
   t.same(match('foo', 'bar'), false)
