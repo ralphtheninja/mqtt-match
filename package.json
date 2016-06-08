@@ -1,0 +1,24 @@
+{
+  "name": "mqtt-match",
+  "version": "0.0.0",
+  "description": "Match mqtt formatted topic strings to strings",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js && standard"
+  },
+  "keywords": [
+    "mqtt",
+    "topic",
+    "match"
+  ],
+  "author": "Lars-Magnus Skog <ralphtheninja@riseup.net>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ralphtheninja/mqtt-match"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^7.1.2",
+    "tape": "^4.5.1"
+  }
+}
