@@ -3,6 +3,7 @@ const match = require('./')
 
 test('should not match', function (t) {
   t.same(match('foo', 'bar'), false)
+  t.same(match('foo', 'FOO'), false)
   t.same(match('foo/bar', 'foo/bar/baz'), false)
   t.same(match('foo/+', 'foo'), false)
   t.same(match('foo/#', 'fooo/abcd/bar/1234'), false)
@@ -14,6 +15,7 @@ test('should not match', function (t) {
 test('should match', function (t) {
   t.same(match('foo', 'foo'), true)
   t.same(match('foo/bar', 'foo/bar'), true)
+  t.same(match('foo/BAR', 'foo/BAR'), true)
   t.same(match('foo/+', 'foo/bar'), true)
   t.same(match('foo/+', 'foo/'), true)
   t.same(match('foo/bar/+', 'foo/bar/baz'), true)
