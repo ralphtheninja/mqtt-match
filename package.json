@@ -17,6 +17,9 @@
     "url": "git://github.com/ralphtheninja/mqtt-match"
   },
   "license": "MIT",
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "devDependencies": {
     "standard": "^11.0.0",
     "tape": "^4.5.1"
