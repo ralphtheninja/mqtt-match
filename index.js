@@ -6,7 +6,7 @@ module.exports = function (filter, topic) {
   for (var i = 0; i < length; ++i) {
     var left = filterArray[i]
     var right = topicArray[i]
-    if (left === '#') return true
+    if (left === '#') return topicArray.length >= length - 1
     if (left !== '+' && left !== right) return false
   }
 
