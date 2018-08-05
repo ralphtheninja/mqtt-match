@@ -9,6 +9,7 @@ test('should not match', function (t) {
   t.same(match('foo/#', 'fooo/abcd/bar/1234'), false)
   t.same(match('+/+', 'foo'), false)
   t.same(match('+', '/foo'), false)
+  t.same(match('foo/+/#', 'foo'), false)
   t.end()
 })
 
