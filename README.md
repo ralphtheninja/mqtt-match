@@ -1,6 +1,6 @@
 # mqtt-match
 
-> Match mqtt formatted topic strings to strings, e.g. `foo/+` should match `foo/bar`.
+> Match mqtt formatted topic strings to strings
 
 [![npm](https://img.shields.io/npm/v/mqtt-match.svg)](https://www.npmjs.com/package/mqtt-match)
 ![Node version](https://img.shields.io/node/v/mqtt-match.svg)
