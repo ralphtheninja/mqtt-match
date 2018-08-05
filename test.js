@@ -22,6 +22,7 @@ test('should match', function (t) {
   t.same(match('foo/bar/+', 'foo/bar/baz'), true)
   t.same(match('foo/+/bar/+', 'foo/abcd/bar/1234'), true)
   t.same(match('foo/#', 'foo/abcd/bar/1234'), true)
+  t.same(match('foo/#', 'foo'), true)
   t.same(match('foo/+/bar/#', 'foo/abcd/bar/1234/fooagain'), true)
   t.same(match('+/+', 'foo/bar'), true)
   t.same(match('+/#', 'foo/bar/baz'), true)
