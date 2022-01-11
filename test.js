@@ -33,6 +33,6 @@ test('should match', function (t) {
   t.same(match('+/+', '/foo'), true)
   t.same(match('$share/group1/+', 'foo', true), true)
   t.same(match('$share/group1/foo/bar', 'foo/bar', true), true)
-  t.same(match('$share/group1/+/+', '/foo', true), true)  
+  t.same(match('$share/group1/+/+', '/foo', true), true)
   t.end()
 })
