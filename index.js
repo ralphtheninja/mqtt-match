@@ -1,5 +1,11 @@
-module.exports = function (filter, topic) {
+module.exports = function (filter, topic, handleSharedSubscription = false) {
   const filterArray = filter.split('/')
+  
+  // handle shared subscrition
+  if (handleSharedSubscription && filterArray.length > 2 && filter.startsWith('$share/') ) {
+    filterArray.splice(0, 2);
+  }
+  
   const length = filterArray.length
   const topicArray = topic.split('/')
 
