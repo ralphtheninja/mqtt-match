@@ -1,6 +1,6 @@
 {
   "name": "mqtt-match",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "description": "Match mqtt formatted topic strings to strings",
   "main": "index.js",
   "scripts": {
