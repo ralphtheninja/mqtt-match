@@ -10,6 +10,8 @@ test('should not match', function (t) {
   t.same(match('+/+', 'foo'), false)
   t.same(match('+', '/foo'), false)
   t.same(match('foo/+/#', 'foo'), false)
+  t.same(match('$share/group1/foo/bar', 'foo/bar/baz'), false)
+  t.same(match('$share/group1/+', 'foo'), false)
   t.end()
 })
 
@@ -29,5 +31,8 @@ test('should match', function (t) {
   t.same(match('#', 'foo/bar/baz'), true)
   t.same(match('/+', '/foo'), true)
   t.same(match('+/+', '/foo'), true)
+  t.same(match('$share/group1/+', 'foo', true), true)
+  t.same(match('$share/group1/foo/bar', 'foo/bar', true), true)
+  t.same(match('$share/group1/+/+', '/foo', true), true)  
   t.end()
 })
